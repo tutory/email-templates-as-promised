@@ -1,6 +1,6 @@
 {
   "name": "email-templates-as-promised",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Promisified version of email-templates",
   "main": "index.js",
   "directories": {
