@@ -1,0 +1,35 @@
+{
+  "name": "email-templates-as-promised",
+  "version": "0.1.0",
+  "description": "Promisified version of email-templates",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tutory/email-templates-as-promised.git"
+  },
+  "keywords": [
+    "email",
+    "templates"
+  ],
+  "author": "Stephan Hoyer <ste.hoyer@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tutory/email-templates-as-promised/issues"
+  },
+  "homepage": "https://github.com/tutory/email-templates-as-promised",
+  "devDependencies": {
+    "ejs": "^2.3.1",
+    "expect.js": "^0.3.1",
+    "mocha": "^2.2.1"
+  },
+  "dependencies": {
+    "email-templates": "^1.2.1",
+    "promise": "^6.1.0"
+  }
+}
