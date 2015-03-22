@@ -18,10 +18,10 @@ emailTemplates(templatesDir, options, function(err, template) {
 ... just do
 
 ```javascript
-render = emailTemplates(templatesDir, options);
+var render = emailTemplates(templatesDir, options);
 
 var locals = { pasta: 'Spaghetti' };
-pastaDiner = render('pasta-dinner', locals).then(function(res) {
+var pastaDiner = render('pasta-dinner', locals).then(function(res) {
   // rendered templates
   // res == {
   //   html: '',
@@ -30,4 +30,24 @@ pastaDiner = render('pasta-dinner', locals).then(function(res) {
 });
 ```
 
-Rendered templates are cached by `templateDir`.
+This way `render` function can easily be exported:
+
+```javascript
+//emails.js
+
+var render = emailTemplates(templatesDir, options);
+
+module.exports.pastaDinner = function(locals) {
+  return render('pasta-dinner', locals);
+};
+
+// usage
+
+var emails = require('./emails');
+
+emails.pastaDiner({ pasta: 'Spagetti' }).then(function(res) {
+  // do something
+});
+```
+
+Rendered templates are also cached by `templatesDir`.
